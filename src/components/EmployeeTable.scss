@@ -1,0 +1,332 @@
+@import url('https://fonts.cdnfonts.com/css/helvetica-neue-55');
+
+.employee-table {
+  width: 100%;
+  margin-top: 20px;
+  background: #FFFFFF;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: 'Helvetica Neue', sans-serif;
+
+  /* Versão Web */
+  .web-view {
+    width: 100%;
+    border-collapse: collapse;
+
+    th,
+    td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+      font-family: 'Helvetica Neue', sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19.09px;
+      letter-spacing: 0%;
+    }
+
+    th {
+      background-color: #0500FF;
+      color: #FFFFFF;
+      font-weight: 500;
+      text-transform: uppercase;
+
+      h2 {
+        font-family: 'Helvetica Neue', sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19.54px;
+        letter-spacing: 0%;
+        color: #FFFFFF;
+        margin: 0;
+        padding: 0;
+      }
+    }
+
+    td {
+      color: #1C1C1C;
+    }
+
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+
+    .employee-image {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    h3 {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19.09px;
+      letter-spacing: 0%;
+      color: #1C1C1C;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  /* Versão Mobile */
+  .mobile-view {
+    display: none;
+
+    .search-container {
+      width: 100%;
+      padding: 10px;
+      background-color: #f9f9f9;
+      border-bottom: 1px solid #ddd;
+
+      input {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-family: 'Helvetica Neue', sans-serif;
+        font-size: 16px;
+        color: #1C1C1C;
+      }
+    }
+
+    .table-header {
+      display: flex;
+      justify-content: space-between;
+      background-color: #0500FF;
+      color: #FFFFFF;
+      padding: 10px;
+      font-weight: bold;
+
+      .header-photo,
+      .header-name {
+        h2 {
+          font-family: 'Helvetica Neue', sans-serif;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 19.54px;
+          letter-spacing: 0%;
+          color: #FFFFFF;
+          margin: 0;
+          padding: 0;
+        }
+      }
+
+      .header-photo {
+        flex: 1;
+      }
+
+      .header-name {
+        flex: 2;
+      }
+
+      .header-icon {
+        flex: 0.5;
+        margin-right: 4px;
+        text-align: right;
+      }
+    }
+
+    .employee-card {
+      padding: 12px;
+      border-bottom: 1px solid #ddd;
+
+      .employee-info {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        .employee-image {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          object-fit: cover;
+          margin-right: 12px;
+        }
+
+        .employee-name {
+          font-size: 16px;
+          font-weight: 500;
+          color: #1C1C1C;
+          flex: 1;
+        }
+
+        .expand-button {
+          background: none;
+          border: none;
+          cursor: pointer;
+          padding: 0;
+
+          .expand-icon {
+            width: 17px;
+            height: 9px;
+            transition: transform 0.3s ease;
+
+            &.expanded {
+              transform: rotate(180deg);
+            }
+          }
+        }
+      }
+
+      .employee-additional-info {
+        margin-top: 10px;
+        padding: 0 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        background: #ffffff;
+
+        .info-row {
+          height: 20px; /* Altura fixa */
+          display: flex;
+          justify-content: space-between; /* Alinha os itens à esquerda e à direita */
+          align-items: center; /* Centraliza verticalmente os itens */
+          position: relative; /* Permite posicionamento relativo */
+          right: 16px; /* Deslocamento à direita */
+          width: 266px; /* Largura fixa */
+          padding: 12px 0; /* Espaçamento interno vertical */
+          margin: 0 auto; /* Centraliza horizontalmente */
+
+          .info-label {
+            color: #1c1c1c;
+            font-size: 16px;
+            font-weight: 500;
+            margin-left: -1px;
+            line-height: 20px;
+            text-align: left;
+            white-space: nowrap;
+          }
+
+          .info-value {
+            font-family: 'Helvetica Neue', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19.09px;
+            letter-spacing: 0%;
+            color: #1C1C1C;
+            margin: 0;
+            padding: 0;
+            margin-right: -16px;
+            text-align: right; // Alinha o valor à direita
+          }
+
+          // Adiciona pontilhados entre as informações
+          &::after {
+            content: '';
+            position: absolute;
+            left: 0; // Alinhado com o início da linha
+            bottom: 0; // Posicionamento vertical
+            width: 100%; // Largura total
+            border-bottom: 1px dashed #DFDFDF; // Espessura da borda
+          }
+
+          // Remove o pontilhado da última linha
+          &:last-child::after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  /* Responsividade Geral */
+  @media (max-width: 768px) {
+    .web-view {
+      display: none;
+    }
+
+    .mobile-view {
+      display: block;
+
+      .search-container {
+        padding: 8px;
+      }
+
+      .table-header {
+        padding: 8px;
+      }
+
+      .employee-additional-info {
+        padding-left: 12px; /* Ajuste para alinhar com a imagem */
+      }
+
+      .info-row {
+        width: 266px; // Mantém a largura fixa
+        margin-left: 0; // Remove o margin-left
+        padding: 12px 0; // Mantém o espaçamento interno aumentado
+      }
+
+      .info-label {
+        font-size: 14px;
+        margin-left: -1px;
+      }
+
+      .info-value {
+        font-size: 14px;
+        margin-right: -16px;
+
+      }
+
+      .info-row::after {
+        width: 100%; // Ajusta a largura dos pontilhados
+        left: 0; // Mantém o posicionamento horizontal
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .employee-image {
+      width: 34px;
+      height: 34px;
+    }
+
+    .employee-name {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 19.09px;
+      margin-left: 26px;
+    }
+
+    .employee-additional-info {
+      padding-left: 8px;
+
+      .info-label {
+        font-size: 13px;
+        margin-left: -1px;
+      }
+
+      .info-value {
+        font-size: 13px;
+        margin-right: -16px;
+      }
+
+      .info-row::after {
+        width: 100%; // Ajusta a largura dos pontilhados para telas menores
+        left: 0; // Mantém o posicionamento horizontal
+      }
+    }
+
+    .expand-icon {
+      width: 17px;
+      height: 9px;
+    }
+
+    .search-container {
+      input {
+        font-size: 14px;
+      }
+    }
+
+    .table-header {
+      .header-photo,
+      .header-name {
+        h2 {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
