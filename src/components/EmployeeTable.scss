@@ -8,6 +8,7 @@
   overflow: hidden;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   font-family: 'Helvetica Neue', sans-serif;
+  transition: transform 0.5s ease;
 
   /* Versão Web */
   .web-view {
@@ -21,8 +22,8 @@
       border-bottom: 1px solid #ddd;
       font-family: 'Helvetica Neue', sans-serif;
       font-weight: 400;
-      font-size: 16px;
-      line-height: 19.09px;
+      font-size: 1rem;
+      line-height: 1.2;
       letter-spacing: 0%;
     }
 
@@ -35,8 +36,8 @@
       h2 {
         font-family: 'Helvetica Neue', sans-serif;
         font-weight: 500;
-        font-size: 16px;
-        line-height: 19.54px;
+        font-size: 1rem;
+        line-height: 1.2;
         letter-spacing: 0%;
         color: #FFFFFF;
         margin: 0;
@@ -62,8 +63,8 @@
     h3 {
       font-family: 'Helvetica Neue', sans-serif;
       font-weight: 400;
-      font-size: 16px;
-      line-height: 19.09px;
+      font-size: 1rem;
+      line-height: 1.2;
       letter-spacing: 0%;
       color: #1C1C1C;
       margin: 0;
@@ -74,23 +75,6 @@
   /* Versão Mobile */
   .mobile-view {
     display: none;
-
-    .search-container {
-      width: 100%;
-      padding: 10px;
-      background-color: #f9f9f9;
-      border-bottom: 1px solid #ddd;
-
-      input {
-        width: 100%;
-        padding: 8px;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        font-family: 'Helvetica Neue', sans-serif;
-        font-size: 16px;
-        color: #1C1C1C;
-      }
-    }
 
     .table-header {
       display: flex;
@@ -105,8 +89,8 @@
         h2 {
           font-family: 'Helvetica Neue', sans-serif;
           font-weight: 500;
-          font-size: 16px;
-          line-height: 19.54px;
+          font-size: 1rem;
+          line-height: 1.2;
           letter-spacing: 0%;
           color: #FFFFFF;
           margin: 0;
@@ -147,7 +131,7 @@
         }
 
         .employee-name {
-          font-size: 16px;
+          font-size: 1rem;
           font-weight: 500;
           color: #1C1C1C;
           flex: 1;
@@ -180,22 +164,22 @@
         background: #ffffff;
 
         .info-row {
-          height: 20px; /* Altura fixa */
+          height: 20px;
           display: flex;
-          justify-content: space-between; /* Alinha os itens à esquerda e à direita */
-          align-items: center; /* Centraliza verticalmente os itens */
-          position: relative; /* Permite posicionamento relativo */
-          right: 16px; /* Deslocamento à direita */
-          width: 266px; /* Largura fixa */
-          padding: 12px 0; /* Espaçamento interno vertical */
-          margin: 0 auto; /* Centraliza horizontalmente */
+          justify-content: space-between;
+          align-items: center;
+          position: relative;
+          right: 16px;
+          width: 266px;
+          padding: 12px 0;
+          margin: 0 auto;
 
           .info-label {
             color: #1c1c1c;
-            font-size: 16px;
+            font-size: 1rem;
             font-weight: 500;
             margin-left: -1px;
-            line-height: 20px;
+            line-height: 1.2;
             text-align: left;
             white-space: nowrap;
           }
@@ -203,29 +187,23 @@
           .info-value {
             font-family: 'Helvetica Neue', sans-serif;
             font-weight: 400;
-            font-size: 16px;
-            line-height: 19.09px;
+            font-size: 1rem;
+            line-height: 1.2;
             letter-spacing: 0%;
             color: #1C1C1C;
             margin: 0;
             padding: 0;
             margin-right: -16px;
-            text-align: right; // Alinha o valor à direita
+            text-align: right;
           }
 
-          // Adiciona pontilhados entre as informações
           &::after {
             content: '';
             position: absolute;
-            left: 0; // Alinhado com o início da linha
-            bottom: 0; // Posicionamento vertical
-            width: 100%; // Largura total
-            border-bottom: 1px dashed #DFDFDF; // Espessura da borda
-          }
-
-          // Remove o pontilhado da última linha
-          &:last-child::after {
-            display: none;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            border-bottom: 1px dashed #DFDFDF;
           }
         }
       }
@@ -250,29 +228,28 @@
       }
 
       .employee-additional-info {
-        padding-left: 12px; /* Ajuste para alinhar com a imagem */
+        padding-left: 12px;
       }
 
       .info-row {
-        width: 266px; // Mantém a largura fixa
-        margin-left: 0; // Remove o margin-left
-        padding: 12px 0; // Mantém o espaçamento interno aumentado
+        width: 266px;
+        margin-left: 0;
+        padding: 12px 0;
       }
 
       .info-label {
-        font-size: 14px;
+        font-size: 0.875rem;
         margin-left: -1px;
       }
 
       .info-value {
-        font-size: 14px;
+        font-size: 0.875rem;
         margin-right: -16px;
-
       }
 
       .info-row::after {
-        width: 100%; // Ajusta a largura dos pontilhados
-        left: 0; // Mantém o posicionamento horizontal
+        width: 100%;
+        left: 0;
       }
     }
   }
@@ -284,9 +261,9 @@
     }
 
     .employee-name {
-      font-size: 16px;
+      font-size: 0.875rem;
       font-weight: 400;
-      line-height: 19.09px;
+      line-height: 1.2;
       margin-left: 26px;
     }
 
@@ -294,18 +271,18 @@
       padding-left: 8px;
 
       .info-label {
-        font-size: 13px;
+        font-size: 0.8125rem;
         margin-left: -1px;
       }
 
       .info-value {
-        font-size: 13px;
+        font-size: 0.8125rem;
         margin-right: -16px;
       }
 
       .info-row::after {
-        width: 100%; // Ajusta a largura dos pontilhados para telas menores
-        left: 0; // Mantém o posicionamento horizontal
+        width: 100%;
+        left: 0;
       }
     }
 
@@ -316,7 +293,7 @@
 
     .search-container {
       input {
-        font-size: 14px;
+        font-size: 0.875rem;
       }
     }
 
@@ -324,7 +301,80 @@
       .header-photo,
       .header-name {
         h2 {
+          font-size: 0.875rem;
+        }
+      }
+    }
+  }
+
+  /* Ajustes para telas de 320px ou menores */
+  @media (max-width: 320px) {
+    .mobile-view {
+      .search-container {
+        padding: 6px;
+
+        input {
+          padding: 6px;
           font-size: 14px;
+        }
+      }
+
+      .table-header {
+        padding: 6px;
+
+        .header-photo,
+        .header-name {
+          h2 {
+            font-size: 14px;
+          }
+        }
+      }
+
+      .employee-card {
+        padding: 8px;
+
+        .employee-info {
+          .employee-image {
+            width: 30px;
+            height: 30px;
+            margin-right: 8px;
+          }
+
+          .employee-name {
+            font-size: 14px;
+          }
+
+          .expand-button {
+            .expand-icon {
+              width: 14px;
+              height: 7px;
+            }
+          }
+        }
+
+        .employee-additional-info {
+          padding: 0 8px;
+
+          .info-row {
+            width: 100%;
+            right: 0;
+            padding: 8px 0;
+
+            .info-label {
+              font-size: 12px;
+              margin-left: 0;
+            }
+
+            .info-value {
+              font-size: 12px;
+              margin-right: 0;
+            }
+
+            &::after {
+              width: 100%;
+              left: 0;
+            }
+          }
         }
       }
     }
