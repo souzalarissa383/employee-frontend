@@ -3,7 +3,6 @@ import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import Home from '../pages/Home';
 import { getEmployees } from '../services/api';
 
-// Mock do serviço getEmployees
 jest.mock('../services/api');
 
 describe('Home', () => {
@@ -30,15 +29,15 @@ describe('Home', () => {
 
     render(<Home />);
 
-    // Verifica se o título "Funcionários" está no documento
+   
     expect(screen.getByText('Funcionários')).toBeInTheDocument();
 
-    // Aguarda a renderização dos dados da API
+   
     await waitFor(() => {
       const joaoElements = screen.getAllByText('João');
       const robertoElements = screen.getAllByText('Roberto');
-      expect(joaoElements.length).toBeGreaterThan(0); // Verifica se pelo menos um elemento "João" está presente
-      expect(robertoElements.length).toBeGreaterThan(0); // Verifica se pelo menos um elemento "Roberto" está presente
+      expect(joaoElements.length).toBeGreaterThan(0); 
+      expect(robertoElements.length).toBeGreaterThan(0); 
     });
   });
 
@@ -65,22 +64,19 @@ describe('Home', () => {
 
     render(<Home />);
 
-    // Aguarda a renderização dos dados da API
     await waitFor(() => {
       const joaoElements = screen.getAllByText('João');
       const robertoElements = screen.getAllByText('Roberto');
-      expect(joaoElements.length).toBeGreaterThan(0); // Verifica se pelo menos um elemento "João" está presente
-      expect(robertoElements.length).toBeGreaterThan(0); // Verifica se pelo menos um elemento "Roberto" está presente
+      expect(joaoElements.length).toBeGreaterThan(0); 
+      expect(robertoElements.length).toBeGreaterThan(0); 
     });
 
-    // Obtém o campo de busca e simula a digitação
     const searchInput = screen.getByPlaceholderText('Pesquisar');
     fireEvent.change(searchInput, { target: { value: 'João' } });
 
-    // Verifica se apenas o funcionário filtrado é exibido
     await waitFor(() => {
       const joaoElements = screen.getAllByText('João');
-      expect(joaoElements.length).toBeGreaterThan(0); // Verifica se pelo menos um elemento "João" está presente
+      expect(joaoElements.length).toBeGreaterThan(0); 
       expect(screen.queryByText('Roberto')).not.toBeInTheDocument();
     });
   });

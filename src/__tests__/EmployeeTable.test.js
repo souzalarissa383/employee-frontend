@@ -25,28 +25,28 @@ describe('EmployeeTable', () => {
   beforeEach(() => render(<EmployeeTable employees={mockEmployees} />));
 
   it('deve renderizar a tabela de funcionários corretamente', () => {
-    // Verifica se os nomes estão na tabela
+    
     mockEmployees.forEach(({ name }) => {
       const nameElements = screen.getAllByText(name);
-      expect(nameElements.length).toBeGreaterThan(0); // Verifica se pelo menos um elemento está presente
+      expect(nameElements.length).toBeGreaterThan(0);
     });
   });
 
   it('deve expandir e colapsar as informações adicionais ao clicar no botão', async () => {
-    // Encontra o botão de expandir do primeiro funcionário
+   
     const expandButtons = screen.getAllByRole('button');
-    fireEvent.click(expandButtons[0]); // Clica no primeiro botão de expandir
+    fireEvent.click(expandButtons[0]); 
 
-    // Aguarda a renderização das informações adicionais
+    
     await waitFor(() => {
-      const additionalInfo = screen.getByText('Back-end', { selector: '.info-value' }); // Verifica o cargo na versão mobile
+      const additionalInfo = screen.getByText('Back-end', { selector: '.info-value' }); 
       expect(additionalInfo).toBeInTheDocument();
     });
 
-    // Clica novamente para colapsar
+    
     fireEvent.click(expandButtons[0]);
 
-    // Verifica se as informações adicionais não estão mais visíveis
+   
     await waitFor(() => {
       const additionalInfo = screen.queryByText('Back-end', { selector: '.info-value' });
       expect(additionalInfo).not.toBeInTheDocument();

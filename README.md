@@ -1,70 +1,124 @@
-# Getting Started with Create React App
+# Employee Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto é uma aplicação web responsiva que exibe uma lista de colaboradores em uma tabela, com funcionalidades de pesquisa e formatação de dados. Foi desenvolvido utilizando React, SASS e uma API simulada com `json-server`.
 
-## Available Scripts
+## Funcionalidades
 
-In the project directory, you can run:
+- **Tabela de Colaboradores:** Exibe a foto, nome, cargo, data de admissão e telefone dos colaboradores.
+- **Pesquisa:** Permite filtrar colaboradores por nome, cargo ou telefone.
+- **Formatação de Dados:** 
+  - Datas no formato `dd/MM/yyyy`.
+  - Telefones no formato `(XX) XXXXX-XXXX`.
+- **Responsividade:** A tabela é adaptável para diferentes tamanhos de tela, incluindo dispositivos móveis.
 
-### `npm start`
+## Tecnologias Utilizadas
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **React:** Biblioteca JavaScript para construção de interfaces de usuário.
+- **SASS:** Pré-processador CSS para estilização avançada.
+- **Axios:** Cliente HTTP para consumir a API.
+- **json-server:** Simula uma API RESTful para desenvolvimento.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Como Executar o Projeto
 
-### `npm test`
+Siga os passos abaixo para configurar e executar o projeto em sua máquina.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Pré-requisitos
 
-### `npm run build`
+- Node.js (v16 ou superior)
+- npm (v8 ou superior)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Passo 1: Clonar o Repositório
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Clone o repositório para o seu ambiente local:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+git clone https://github.com/seu-usuario/employee-frontend.git
+cd employee-frontend
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Passo 2: Instalar Dependências
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Instale as dependências do projeto:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+npm install
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Passo 3: Iniciar o JSON Server
 
-## Learn More
+O projeto utiliza o json-server para simular uma API. Inicie o servidor com o seguinte comando:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+npx json-server --watch db.json --port 3000
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Isso fará com que os dados estejam disponíveis em http://localhost:3000/employees.
 
-### Code Splitting
+### Passo 4: Executar o Projeto
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Inicie o servidor de desenvolvimento do React:
 
-### Analyzing the Bundle Size
+```bash
+npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+O projeto será aberto automaticamente no navegador em http://localhost:3000.
 
-### Making a Progressive Web App
+### Passo 5: Testar a Aplicação
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Acesse a página inicial para visualizar a lista de colaboradores.
+- Utilize o campo de pesquisa para filtrar os colaboradores por nome, cargo ou telefone.
+- Redimensione a janela do navegador para testar a responsividade da tabela.
 
-### Advanced Configuration
+### Estrutura do Projeto
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+employee-frontend/
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   │   ├── EmployeeTable.js
+│   │   └── EmployeeTable.scss
+│   ├── pages/
+│   │   ├── Home.js
+│   │   └── Home.scss
+│   ├── services/
+│   │   └── api.js
+│   ├── styles/
+│   │   └── App.scss
+│   ├── __tests__/                  # Pasta de testes
+│   │   ├── EmployeeTable.test.js   # Testes do componente EmployeeTable
+│   │   ├── Home.test.js            # Testes da página Home
+│   │   └── api.test.js             # Testes do serviço de API
+│   ├── App.js
+│   ├── index.js
+│   └── ...
+├── db.json
+├── package.json
+└── README.md
 
-### Deployment
+### Testes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+O projeto inclui testes unitários e de integração para garantir o funcionamento correto dos componentes e da lógica de negócio. Os testes estão localizados na pasta src/__tests__/.
 
-### `npm run build` fails to minify
+## Testes do Serviço de API (api.test.js)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Teste de Sucesso (deve retornar a lista de funcionários quando a requisição for bem-sucedida):
+    - Verifica se a função getEmployees retorna um array.
+    - Verifica se o primeiro item do array possui as propriedades id, name e job.
+
+- Teste de Erro (deve retornar um array vazio em caso de erro na requisição):
+    - Simula uma requisição falha (status 404) e verifica se o erro é tratado corretamente.
+
+## Testes do Componente EmployeeTable (EmployeeTable.test.js)
+- Teste de Renderização (deve renderizar a tabela de funcionários corretamente):
+    - Verifica se os nomes dos funcionários estão sendo renderizados corretamente na tabela.
+
+- Teste de Expansão/Colapso (deve expandir e colapsar as informações adicionais ao clicar no botão):
+    - Verifica se as informações adicionais (como o cargo) são exibidas e ocultadas ao clicar no botão.
+
+## Testes da Página Home (Home.test.js)
+- Teste de Renderização (deve renderizar o componente corretamente):
+    - Verifica se a página Home renderiza corretamente e exibe os dados dos funcionários.
+
+- Teste de Filtro (deve filtrar os funcionários ao digitar no campo de busca):
+    - Verifica se a funcionalidade de pesquisa filtra os colaboradores corretamente.
+
+

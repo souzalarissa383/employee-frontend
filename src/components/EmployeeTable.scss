@@ -2,42 +2,42 @@
 
 .employee-table {
   width: 100%;
-  margin-top: 20px;
+  margin-top: 1.25rem; 
   background: #FFFFFF;
-  border-radius: 8px;
+  border-radius: 0.5rem; 
   overflow: hidden;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  font-family: 'Helvetica Neue', sans-serif;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1); 
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   transition: transform 0.5s ease;
 
-  /* Versão Web */
   .web-view {
     width: 100%;
     border-collapse: collapse;
 
     th,
     td {
-      padding: 12px;
+      padding: 0.75rem; 
       text-align: left;
-      border-bottom: 1px solid #ddd;
-      font-family: 'Helvetica Neue', sans-serif;
+      border-bottom: 0.0625rem solid #ddd; 
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-weight: 400;
       font-size: 1rem;
-      line-height: 1.2;
+      line-height: 100%;
       letter-spacing: 0%;
     }
 
     th {
       background-color: #0500FF;
       color: #FFFFFF;
-      font-weight: 500;
+      font-weight: 300;
+      line-height: 100%;
       text-transform: uppercase;
 
       h2 {
-        font-family: 'Helvetica Neue', sans-serif;
-        font-weight: 500;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-weight: 300;
         font-size: 1rem;
-        line-height: 1.2;
+        line-height: 100%;
         letter-spacing: 0%;
         color: #FFFFFF;
         margin: 0;
@@ -54,17 +54,17 @@
     }
 
     .employee-image {
-      width: 40px;
-      height: 40px;
+      width: 2.5rem; 
+      height: 2.5rem; 
       border-radius: 50%;
       object-fit: cover;
     }
 
     h3 {
-      font-family: 'Helvetica Neue', sans-serif;
-      font-weight: 400;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: 300;
       font-size: 1rem;
-      line-height: 1.2;
+      line-height: 100%;
       letter-spacing: 0%;
       color: #1C1C1C;
       margin: 0;
@@ -72,7 +72,6 @@
     }
   }
 
-  /* Versão Mobile */
   .mobile-view {
     display: none;
 
@@ -81,16 +80,16 @@
       justify-content: space-between;
       background-color: #0500FF;
       color: #FFFFFF;
-      padding: 10px;
+      padding: 0.625rem; 
       font-weight: bold;
 
       .header-photo,
       .header-name {
         h2 {
-          font-family: 'Helvetica Neue', sans-serif;
-          font-weight: 500;
+          font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+          font-weight: 300;
           font-size: 1rem;
-          line-height: 1.2;
+          line-height: 100%;
           letter-spacing: 0%;
           color: #FFFFFF;
           margin: 0;
@@ -108,14 +107,14 @@
 
       .header-icon {
         flex: 0.5;
-        margin-right: 4px;
+        margin-right: 0.25rem; 
         text-align: right;
       }
     }
 
     .employee-card {
-      padding: 12px;
-      border-bottom: 1px solid #ddd;
+      padding: 0.75rem; 
+      border-bottom: 0.0625rem solid #ddd; 
 
       .employee-info {
         display: flex;
@@ -123,16 +122,16 @@
         cursor: pointer;
 
         .employee-image {
-          width: 40px;
-          height: 40px;
+          width: 2.5rem; 
+          height: 2.5rem; 
           border-radius: 50%;
           object-fit: cover;
-          margin-right: 12px;
+          margin-right: 0.75rem; 
         }
 
         .employee-name {
           font-size: 1rem;
-          font-weight: 500;
+          font-weight: 300;
           color: #1C1C1C;
           flex: 1;
         }
@@ -144,8 +143,8 @@
           padding: 0;
 
           .expand-icon {
-            width: 17px;
-            height: 9px;
+            width: 1.0625rem; 
+            height: 0.5625rem; 
             transition: transform 0.3s ease;
 
             &.expanded {
@@ -156,44 +155,45 @@
       }
 
       .employee-additional-info {
-        margin-top: 10px;
-        padding: 0 16px;
+        margin-top: 0.625rem; 
+        padding: 0 1rem; 
         display: flex;
         flex-direction: column;
-        gap: 8px;
+        gap: 0.5rem; 
         background: #ffffff;
 
         .info-row {
-          height: 20px;
+          height: 1.25rem; 
           display: flex;
           justify-content: space-between;
           align-items: center;
           position: relative;
-          right: 16px;
-          width: 266px;
-          padding: 12px 0;
+          right: 1rem; 
+          width: 16.625rem; 
+          padding: 0.75rem 0; 
           margin: 0 auto;
 
           .info-label {
             color: #1c1c1c;
             font-size: 1rem;
             font-weight: 500;
-            margin-left: -1px;
-            line-height: 1.2;
+            margin-left: -0.0625rem; 
+            line-height: 100%;
             text-align: left;
+            letter-spacing: 0%;
             white-space: nowrap;
           }
 
           .info-value {
-            font-family: 'Helvetica Neue', sans-serif;
-            font-weight: 400;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-weight: 300;
             font-size: 1rem;
-            line-height: 1.2;
+            line-height: 100%;
             letter-spacing: 0%;
             color: #1C1C1C;
             margin: 0;
             padding: 0;
-            margin-right: -16px;
+            margin-right: -1rem; 
             text-align: right;
           }
 
@@ -203,14 +203,13 @@
             left: 0;
             bottom: 0;
             width: 100%;
-            border-bottom: 1px dashed #DFDFDF;
+            border-bottom: 0.0625rem dashed #DFDFDF; 
           }
         }
       }
     }
   }
 
-  /* Responsividade Geral */
   @media (max-width: 768px) {
     .web-view {
       display: none;
@@ -220,31 +219,31 @@
       display: block;
 
       .search-container {
-        padding: 8px;
+        padding: 0.5rem; 
       }
 
       .table-header {
-        padding: 8px;
+        padding: 0.5rem; 
       }
 
       .employee-additional-info {
-        padding-left: 12px;
+        padding-left: 0.75rem; 
       }
 
       .info-row {
-        width: 266px;
+        width: 16.625rem; 
         margin-left: 0;
-        padding: 12px 0;
+        padding: 0.75rem 0; 
       }
 
       .info-label {
-        font-size: 0.875rem;
-        margin-left: -1px;
+        font-size: 0.875rem; 
+        margin-left: -0.0625rem; 
       }
 
       .info-value {
-        font-size: 0.875rem;
-        margin-right: -16px;
+        font-size: 0.875rem; 
+        margin-right: -1rem; 
       }
 
       .info-row::after {
@@ -256,28 +255,28 @@
 
   @media (max-width: 480px) {
     .employee-image {
-      width: 34px;
-      height: 34px;
+      width: 2.125rem; 
+      height: 2.125rem; 
     }
 
     .employee-name {
-      font-size: 0.875rem;
+      font-size: 0.875rem; 
       font-weight: 400;
       line-height: 1.2;
-      margin-left: 26px;
+      margin-left: 1.625rem; 
     }
 
     .employee-additional-info {
-      padding-left: 8px;
+      padding-left: 0.5rem; 
 
       .info-label {
-        font-size: 0.8125rem;
-        margin-left: -1px;
+        font-size: 0.8125rem; 
+        margin-left: -0.0625rem; 
       }
 
       .info-value {
-        font-size: 0.8125rem;
-        margin-right: -16px;
+        font-size: 0.8125rem; 
+        margin-right: -1rem; 
       }
 
       .info-row::after {
@@ -287,13 +286,13 @@
     }
 
     .expand-icon {
-      width: 17px;
-      height: 9px;
+      width: 1.0625rem; 
+      height: 0.5625rem; 
     }
 
     .search-container {
       input {
-        font-size: 0.875rem;
+        font-size: 0.875rem; 
       }
     }
 
@@ -301,72 +300,71 @@
       .header-photo,
       .header-name {
         h2 {
-          font-size: 0.875rem;
+          font-size: 0.875rem; 
         }
       }
     }
   }
 
-  /* Ajustes para telas de 320px ou menores */
   @media (max-width: 320px) {
     .mobile-view {
       .search-container {
-        padding: 6px;
+        padding: 0.375rem;
 
         input {
-          padding: 6px;
-          font-size: 14px;
+          padding: 0.375rem; 
+          font-size: 0.875rem; 
         }
       }
 
       .table-header {
-        padding: 6px;
+        padding: 0.375rem; 
 
         .header-photo,
         .header-name {
           h2 {
-            font-size: 14px;
+            font-size: 0.875rem; 
           }
         }
       }
 
       .employee-card {
-        padding: 8px;
+        padding: 0.5rem; 
 
         .employee-info {
           .employee-image {
-            width: 30px;
-            height: 30px;
-            margin-right: 8px;
+            width: 1.875rem; 
+            height: 1.875rem; 
+            margin-right: 0.5rem; 
           }
 
           .employee-name {
-            font-size: 14px;
+            font-size: 0.875rem; 
           }
 
           .expand-button {
             .expand-icon {
-              width: 14px;
-              height: 7px;
+              width: 0.875rem; 
+              height: 0.4375rem; 
             }
           }
         }
 
         .employee-additional-info {
-          padding: 0 8px;
+          padding: 0 0.5rem; 
 
           .info-row {
             width: 100%;
             right: 0;
-            padding: 8px 0;
+            padding: 0.5rem 0; 
 
             .info-label {
-              font-size: 12px;
+              font-size: 0.75rem; 
               margin-left: 0;
             }
 
             .info-value {
-              font-size: 12px;
+              font-size: 0.75rem; 
               margin-right: 0;
             }
 

@@ -16,16 +16,16 @@ html, body {
 .home-container {
   width: 100%;
   min-height: 100vh;
-  padding-top: 80px;
+  padding-top: 5rem; 
 }
 
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 20px;
+  padding: 0.625rem 1.25rem; 
   background: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1); 
   width: 100%;
   position: fixed;
   top: 0;
@@ -35,13 +35,13 @@ html, body {
 }
 
 .logo {
-  height: 40px;
+  height: 2.5rem; 
 }
 
 .content {
-  max-width: 1200px;
+  max-width: 75rem; 
   margin: 0 auto;
-  padding: 20px;
+  padding: 1.25rem; 
 }
 
 .header-content {
@@ -49,14 +49,14 @@ html, body {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 0.625rem; 
 }
 
 .header-content h1 {
   font-family: 'Helvetica Neue', sans-serif;
   font-weight: 500;
-  font-size: 20px;
-  line-height: 24.42px;
+  font-size: 1.25rem; 
+  line-height: 100%;
   letter-spacing: 0%;
   color: #1C1C1C;
   margin: 0;
@@ -67,17 +67,17 @@ html, body {
   display: flex;
   align-items: center;
   background-color: #FFFFFF;
-  border: 1px solid #DFDFDF;
-  border-radius: 8px;
-  padding: 8px;
+  border: 0.0625rem solid #DFDFDF;
+  border-radius: 0.5rem;
+  padding: 0.5rem; 
   width: 100%;
-  max-width: 300px;
+  max-width: 18.75rem; 
 }
 
 .search-icon {
-  width: 24px;
-  height: 24px;
-  margin-left: 8px;
+  width: 1.5rem; 
+  height: 1.5rem; 
+  margin-left: 0.5rem; 
 }
 
 .search-input {
@@ -86,7 +86,7 @@ html, body {
   outline: none;
   color: #9E9E9E;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1rem; 
   background-color: #FFFFFF;
 }
 
@@ -94,22 +94,21 @@ html, body {
   color: #999;
 }
 
-/* Responsividade */
-@media (max-width: 1024px) {
+@media (max-width: 64rem) { 
   .content {
-    padding: 15px;
+    padding: 0.9375rem; 
   }
 
   .header {
-    padding: 15px;
+    padding: 0.9375rem; 
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 48rem) { 
   .header {
     flex-direction: column;
     align-items: flex-start;
-    padding: 15px;
+    padding: 0.9375rem; 
   }
 
   .header-content {
@@ -121,7 +120,7 @@ html, body {
 
   .search-container {
     width: 90%;
-    margin-top: 10px;
+    margin-top: 0.625rem; 
   }
 
   table {
@@ -131,20 +130,20 @@ html, body {
   }
 
   th, td {
-    padding: 10px;
-    font-size: 14px;
+    padding: 0.625rem; 
+    font-size: 0.875rem; 
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 30rem) { 
   th, td {
-    padding: 8px;
-    font-size: 12px;
+    padding: 0.5rem; 
+    font-size: 0.75rem; 
   }
 
   .employee-image {
-    width: 30px;
-    height: 30px;
+    width: 1.875rem; 
+    height: 1.875rem; 
   }
 
   .search-container {
