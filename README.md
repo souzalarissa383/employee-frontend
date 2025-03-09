@@ -34,7 +34,7 @@ Clone o repositório para o seu ambiente local:
 ```bash
 git clone https://github.com/seu-usuario/employee-frontend.git
 cd employee-frontend
-
+```
 
 ### Passo 2: Instalar Dependências
 
@@ -42,15 +42,17 @@ Instale as dependências do projeto:
 
 ```bash
 npm install
+```
 
 ### Passo 3: Iniciar o JSON Server
 
-O projeto utiliza o json-server para simular uma API. Inicie o servidor com o seguinte comando:
+O projeto utiliza o `json-server` para simular uma API. Inicie o servidor com o seguinte comando:
 
 ```bash
-npx json-server --watch db.json --port 3000
+npx json-server --watch db.json --port 3001
+```
 
-Isso fará com que os dados estejam disponíveis em http://localhost:3000/employees.
+Isso fará com que os dados estejam disponíveis em `http://localhost:3001/employees`.
 
 ### Passo 4: Executar o Projeto
 
@@ -58,8 +60,9 @@ Inicie o servidor de desenvolvimento do React:
 
 ```bash
 npm start
+```
 
-O projeto será aberto automaticamente no navegador em http://localhost:3000.
+O projeto será aberto automaticamente no navegador em `http://localhost:3000`.
 
 ### Passo 5: Testar a Aplicação
 
@@ -67,8 +70,9 @@ O projeto será aberto automaticamente no navegador em http://localhost:3000.
 - Utilize o campo de pesquisa para filtrar os colaboradores por nome, cargo ou telefone.
 - Redimensione a janela do navegador para testar a responsividade da tabela.
 
-### Estrutura do Projeto
+## Estrutura do Projeto
 
+```bash
 employee-frontend/
 ├── public/
 ├── src/
@@ -93,32 +97,37 @@ employee-frontend/
 ├── db.json
 ├── package.json
 └── README.md
+```
 
-### Testes
+## Testes
 
-O projeto inclui testes unitários e de integração para garantir o funcionamento correto dos componentes e da lógica de negócio. Os testes estão localizados na pasta src/__tests__/.
+O projeto inclui testes unitários e de integração para garantir o funcionamento correto dos componentes e da lógica de negócio. Os testes estão localizados na pasta `src/__tests__/`.
 
-## Testes do Serviço de API (api.test.js)
+### Testes do Serviço de API (`api.test.js`)
 
-- Teste de Sucesso (deve retornar a lista de funcionários quando a requisição for bem-sucedida):
-    - Verifica se a função getEmployees retorna um array.
-    - Verifica se o primeiro item do array possui as propriedades id, name e job.
+- **Teste de Sucesso** (deve retornar a lista de funcionários quando a requisição for bem-sucedida):
+  - Verifica se a função `getEmployees` retorna um array.
+  - Verifica se o primeiro item do array possui as propriedades `id`, `name` e `job`.
 
-- Teste de Erro (deve retornar um array vazio em caso de erro na requisição):
-    - Simula uma requisição falha (status 404) e verifica se o erro é tratado corretamente.
+- **Teste de Erro** (deve retornar um array vazio em caso de erro na requisição):
+  - Simula uma requisição falha (status 404) e verifica se o erro é tratado corretamente.
 
-## Testes do Componente EmployeeTable (EmployeeTable.test.js)
-- Teste de Renderização (deve renderizar a tabela de funcionários corretamente):
-    - Verifica se os nomes dos funcionários estão sendo renderizados corretamente na tabela.
+### Testes do Componente `EmployeeTable` (`EmployeeTable.test.js`)
 
-- Teste de Expansão/Colapso (deve expandir e colapsar as informações adicionais ao clicar no botão):
-    - Verifica se as informações adicionais (como o cargo) são exibidas e ocultadas ao clicar no botão.
+- **Teste de Renderização** (deve renderizar a tabela de funcionários corretamente):
+  - Verifica se os nomes dos funcionários estão sendo exibidos corretamente na tabela.
 
-## Testes da Página Home (Home.test.js)
-- Teste de Renderização (deve renderizar o componente corretamente):
-    - Verifica se a página Home renderiza corretamente e exibe os dados dos funcionários.
+- **Teste de Expansão/Colapso** (deve expandir e colapsar as informações adicionais ao clicar no botão):
+  - Verifica se as informações adicionais (como o cargo) são exibidas e ocultadas ao clicar no botão.
 
-- Teste de Filtro (deve filtrar os funcionários ao digitar no campo de busca):
-    - Verifica se a funcionalidade de pesquisa filtra os colaboradores corretamente.
+### Testes da Página `Home` (`Home.test.js`)
+
+- **Teste de Renderização** (deve renderizar o componente corretamente):
+  - Verifica se a página `Home` renderiza corretamente e exibe os dados dos funcionários.
+
+- **Teste de Filtro** (deve filtrar os funcionários ao digitar no campo de busca):
+  - Verifica se a funcionalidade de pesquisa filtra os colaboradores corretamente.
+
+
 
 
